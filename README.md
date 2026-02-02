@@ -26,4 +26,6 @@ That is all you need to run the game.
 1. In your GitHub repository, go to **Settings → Pages**.
 2. Under **Build and deployment**, select **GitHub Actions**.
 3. Push to the `main` branch (or your default branch). The workflow in `.github/workflows/pages.yml` will publish the site.
-4. Once the workflow completes, your game will be available at the Pages URL shown in **Settings → Pages**.
+4. The game will be available at your **project Pages URL**:
+   `https://<username>.github.io/<repository>/`
+   (for this repo, that is `https://heruberuto.github.io/tetris/`).
