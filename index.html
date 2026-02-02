@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client-Side Tetris</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>Client-Side Tetris</h1>
+        <div class="stats">
+          <div>
+            <span class="label">Score</span>
+            <span id="score">0</span>
+          </div>
+          <div>
+            <span class="label">Lines</span>
+            <span id="lines">0</span>
+          </div>
+          <div>
+            <span class="label">Level</span>
+            <span id="level">1</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start">Start</button>
+          <button id="pause" disabled>Pause</button>
+          <button id="reset">Reset</button>
+        </div>
+        <div class="help">
+          <p><strong>Controls</strong></p>
+          <ul>
+            <li>← →: Move</li>
+            <li>↓: Soft drop</li>
+            <li>Space: Hard drop</li>
+            <li>↑: Rotate</li>
+            <li>P: Pause</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="board">
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div class="next">
+          <p class="label">Next</p>
+          <canvas id="next" width="120" height="120"></canvas>
+        </div>
+        <p id="status" class="status">Press Start to play.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
