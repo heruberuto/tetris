@@ -1,0 +1,135 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d1117;
+  color: #f0f6fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 24px;
+  width: min(960px, 100%);
+}
+
+.panel {
+  background: #161b22;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.stats {
+  display: grid;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #0b1118;
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b949e;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: #238636;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:disabled {
+  background: #30363d;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: #2ea043;
+  transform: translateY(-1px);
+}
+
+.help {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+}
+
+.help ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+canvas {
+  background: #0b1118;
+  border-radius: 12px;
+  border: 2px solid #30363d;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.status {
+  color: #8b949e;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .board {
+    order: -1;
+  }
+}
